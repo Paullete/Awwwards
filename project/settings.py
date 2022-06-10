@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myproject.apps.MyprojectConfig',
     'bootstrap4',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
