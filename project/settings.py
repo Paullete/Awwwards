@@ -13,6 +13,10 @@ import os
 from decouple import Config
 # from pathlib import Path
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -131,3 +135,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+cloudinary.config( 
+  cloud_name = "nakuru-county", 
+  api_key = "236943895423812", 
+  api_secret = "mUSBMB06CNPSbP81m8gO9Rk7dWY",
+)
