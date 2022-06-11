@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Awwards</title>
+    <title>Awwards🏆</title>
     {% block styles %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,11 +21,37 @@
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/index.css'%}">
     {%  endblock %}
-</head>
+    <style>
+        body{
+        background-image: url("https://images.pexels.com/photos/7134994/pexels-photo-7134994.jpeg?cs=srgb&dl=pexels-gradienta-7134994.jpg&fm=jpg");
+        background-size: cover;
+        font-family: "Crimson Text", serif;
+        }
+        .text-muted {
+            display: none;
+          }
+          #welcome {
+            padding-top: 50px;
+            font-size: 20px;
+          }
+          
+          .user{
+            text-transform: capitalize;
+          }
+          
+        .landing-page {
+        background-image: url("https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?cs=srgb&dl=pexels-abdullah-ghatasheh-1631677.jpg&fm=jpg");
+        height: 300px;
+        background-size: cover;
+          }
+          
 
+    </style>
+    
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Awwards</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <a class="navbar-brand" href="#">Awwards🏆</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
             aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,7 +65,7 @@
                 </li>
                 <form class="form-inline my-2 my-lg-0 ml-5" action="{% url 'search_project' %}">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search project" name="search">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <li class="nav-item ml-5">
                         <a class="nav-link" href="{%url 'profile'%}">{{user.username}}</a>

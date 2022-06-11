@@ -1,17 +1,17 @@
 body {
     font-family: "Crimson Text", serif;
-    background-color: rgba(148, 112, 112, 0.267);
+    /* background-color: rgba(148, 112, 112, 0.267); */
   }
   
   .text-muted {
     display: none;
   }
   
-  .landing-page {
-    background: linear-gradient(to right, #364d55 0%, #000066 100%);
+  /* .landing-page {
+    background-image: url("https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?cs=srgb&dl=pexels-abdullah-ghatasheh-1631677.jpg&fm=jpg");
     height: 300px;
     background-size: cover;
-  }
+  } */
   
   #welcome {
     padding-top: 50px;
