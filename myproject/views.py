@@ -1,9 +1,10 @@
 from django.shortcuts import render,redirect
 from . models import *
-from .forms import ProjectUpload,UpdateProfileForm
+from .forms import *
 from django.contrib.auth.decorators import login_required
 from rest_framework import viewsets
 from .serializers import PostSerializer,ProfileSeralizer
+from django.contrib.auth import logout
 
 def home(request):
     projects = Post.objects.all()
