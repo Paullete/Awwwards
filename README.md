@@ -31,7 +31,7 @@ The user would like to.... :
 * pillow
 * gunicorn
 * bootstrap
-* s3 Bucketshttps://pote-awards.herokuapp.com/
+* s3 Buckets
 * postgress
 
 #### Cloning
