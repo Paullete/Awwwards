@@ -16,7 +16,7 @@ The user would like to.... :
 +  Rate existing and personal projects
 +  Logout.
 
-## [Demo](https://pote-awards.herokuapp.com/) click to view
+<!-- ## [Demo](https://pote-awards.herokuapp.com/) click to view -->
 
   The app looks like this: 
   ![Image](/media/images/Screenshot%20from%202022-06-12%2011-24-08.png)
