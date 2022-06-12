@@ -14,9 +14,6 @@ from decouple import config,Csv
 import dj_database_url
 
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -47,7 +44,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'tinymce',
     'rest_framework',
-    'cloudinary',
+    'storages',
     'star_ratings',
 ]
 
@@ -148,7 +145,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
+STATIC_ROOT =os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -172,8 +169,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
-cloudinary.config( 
-  cloud_name = "nakuru-county", 
-  api_key = "236943895423812", 
-  api_secret = "mUSBMB06CNPSbP81m8gO9Rk7dWY",
-)
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIAXMBQRW6STUWP3S6K'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'awards-bucket'
