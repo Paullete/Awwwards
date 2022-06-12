@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from decouple import config,Csv
+import django_heroku
 import dj_database_url
 
 
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -136,7 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -159,7 +161,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STAR_RATINGS_RERATE = False
 STAR_RATINGS_RANGE=10
 STAR_RATINGS_STAR_HEIGHT=20
@@ -176,3 +178,5 @@ AWS_ACCESS_KEY_ID = 'AKIAXMBQRW6STUWP3S6K'
 AWS_SECRET_ACCESS_KEY = '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'
 
 AWS_STORAGE_BUCKET_NAME = 'awards-bucket'
+
+django_heroku.settings(locals())
