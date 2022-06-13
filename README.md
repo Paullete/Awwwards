@@ -16,7 +16,7 @@ The user would like to.... :
 +  Rate existing and personal projects
 +  Logout.
 
-<!-- ## [Demo](https://pote-awards.herokuapp.com/) click to view -->
+## [Demo](https://pote-awards.herokuapp.com/) click to view
 
   The app looks like this: 
   ![Image](/media/images/Screenshot%20from%202022-06-12%2011-24-08.png)
@@ -42,18 +42,18 @@ The user would like to.... :
 
 
 
-* cd photoshare
+* cd myproject
 
 * Vs code . or atom . based on the text editor you have.
 
 ### Running the Application
 * To run the application, open the cloned file in terminal and run the following commands:
- * #### create flask environnent
+ * #### create an environnent
         $  python3 -m venv pip virtual -- creates the virtual for runnning your app      
         $ source virtual/bin/env  -- activate  the virtual
         $ python3 manage.py runserver
         
-* #### Install Flask and other dependencies/Modules
+* #### Install  dependencies/Modules
         $ pip install django
         $ pip install pillow
         
